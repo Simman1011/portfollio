@@ -417,7 +417,16 @@ header #contactBtn:hover span {
   display: inline-block;
 }
 
+.border-rounded{
+  border-radius: 50%;
+}
+
 .pro-container .pro-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   position: relative;
   padding: 20px;
   text-align: center;
@@ -553,9 +562,12 @@ header #contactBtn:hover span {
 }
 
 .contact #contact-form #chatMe {
+  width: 100%;
   border-radius: 0px 0px 6px 6px;
   background: #8652E5;
   color: #fff;
+  border: none;
+  padding: 20px;
   margin: 0px;
   font-size: 1.5rem;
   font-family: fredoka;

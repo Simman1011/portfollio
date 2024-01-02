@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" href="android-chrome-192x192.png" sizes="192x192" />
-    <link rel="icon" href="android-chrome-512x512.png" sizes="512x512" />
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" />
+    <link rel="icon" href="assets/img/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" href="assets/img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="assets/img/favicon/android-chrome-192x192.png" sizes="192x192" />
+    <link rel="icon" href="assets/img/favicon/android-chrome-512x512.png" sizes="512x512" />
+    <link rel="apple-touch-icon-precomposed" href="assets/img/favicon/apple-touch-icon.png" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="author" content="Narasimman" />
     <meta name="keywords" content="Full Stack Developer, Web Development, Front-End Development, Back-End Development, React.js, Node.js, JavaScript, HTML, CSS, Responsive Design, API Integration, Database Management, MongoDB, MySQL, Project Management, Software Development, UI/UX Design, Agile Development
@@ -26,6 +26,24 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            // emailjs.init('wqXB90wvSCyUJTYwv');
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_82nv8en', 'template_6efwkdf', this, "wqXB90wvSCyUJTYwv")
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -128,7 +146,7 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                         <p class="code">&#60;/h4&#62;</p>
                     </div>
                     <div class="div">
-                        <p class="code">&#60;p&#62;</p>
+                        <!-- <p class="code">&#60;p&#62;</p> -->
                         <div class="experience">
                             <div class="d-flex" data-aos="fade-up" data-aos-delay="50">
                                 <p class="expHead">Company:<br>
@@ -138,7 +156,7 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                                 <p class="expText">Breaktalks Innovation pvt ltd <br>
                                     January 2021 - June 2021</p>
                             </div>
-                            <p>
+                            <p data-aos="fade-up" data-aos-delay="50">
                                 In my role at Breaktalks Innovation, I led the development of diverse websites using
                                 cutting-edge technologies such as
                                 JavaScript, Angular, Bootstrap, HTML, and CSS. Collaborating seamlessly with UX
@@ -146,9 +164,9 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                                 back-end developers, we delivered projects that seamlessly blended form and function.
                             </p>
                         </div>
-                        <p class="code">&#60;/p&#62;</p>
+                        <!-- <p class="code">&#60;/p&#62;</p> -->
 
-                        <p class="code">&#60;p&#62;</p>
+                        <!-- <p class="code">&#60;p&#62;</p> -->
                         <div class="experience">
                             <div class="d-flex" data-aos="fade-up" data-aos-delay="50">
                                 <p class="expHead">Company:<br>
@@ -157,7 +175,7 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                                 <p class="expText">Ahaguru education technology <br>
                                     July 2021 - January 2022</p>
                             </div>
-                            <p>
+                            <p data-aos="fade-up" data-aos-delay="50">
                                 As the custodian of the company's official website, I meticulously maintained and
                                 updated the platform in alignment with
                                 project manager specifications. Leveraging technologies like JavaScript, Bootstrap,
@@ -165,9 +183,9 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                                 remained a seamless and dynamic representation of the company's brand.
                             </p>
                         </div>
-                        <p class="code">&#60;/p&#62;</p>
+                        <!-- <p class="code">&#60;/p&#62;</p> -->
 
-                        <p class="code">&#60;p&#62;</p>
+                        <!-- <p class="code">&#60;p&#62;</p> -->
                         <div class="experience">
                             <div class="d-flex" data-aos="fade-up" data-aos-delay="50">
                                 <p class="expHead">Company:<br>
@@ -176,7 +194,7 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                                 <p class="expText">Blue Silicon Infotech Pvt Ltd <br>
                                     February 2022 - Present</p>
                             </div>
-                            <p>
+                            <p data-aos="fade-up" data-aos-delay="50">
                                 As the steward of the company's official website, I diligently maintained and enhanced
                                 the platform in accordance with project manager requirements. Employing a tech stack
                                 encompassing JavaScript, Bootstrap,
@@ -187,7 +205,7 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                                 the website's capabilities.
                             </p>
                         </div>
-                        <p class="code">&#60;/p&#62;</p>
+                        <!-- <p class="code">&#60;/p&#62;</p> -->
 
                         <!-- <p class="code">&#60;ul&#62;</p>
                         <ul>
@@ -235,9 +253,10 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="pro-card">
-                            <img src="assets/img/breaktalks.png" alt="breaktalks" class="img-fluid">
-                            <a href="https://breaktalks.com/#/" target="_blank">
+                        <div class="pro-card px-5">
+                            <img src="assets/img/projects/qc-logo.png" alt="Question Cloud" title="Question Cloud"
+                                class="img-fluid">
+                            <a href="https://questioncloud.in/" target="_blank">
                                 <div class="viewPro">
                                     <span>View Project</span>
                                 </div>
@@ -246,8 +265,9 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                     </div>
                     <div class="col-md-3">
                         <div class="pro-card">
-                            <img src="assets/img/omdecors.png" alt="omdecors" class="img-fluid">
-                            <a href="https://omdecors.com/" target="_blank">
+                            <img src="assets/img/projects/bs-logo.png" alt="Blue Silicon Infotech"
+                                title="Blue Silicon Infotech" class="w-50">
+                            <a href="https://www.bluesiliconinfotech.com/" target="_blank">
                                 <div class="viewPro">
                                     <span>View Project</span>
                                 </div>
@@ -256,8 +276,9 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                     </div>
                     <div class="col-md-3">
                         <div class="pro-card">
-                            <img src="assets/img/9to9.png" alt="9to9" class="img-fluid">
-                            <a href="https://ninetoninewashers.com/" target="_blank">
+                            <img src="assets/img/projects/jl-logo.jpg" alt="Jobs Link" title="Jobs Link"
+                                class="w-50 border-rounded">
+                            <a href="https://jobslink.in/" target="_blank">
                                 <div class="viewPro">
                                     <span>View Project</span>
                                 </div>
@@ -279,8 +300,8 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                 <div class="row my-md-4">
                     <div class="col-md-6">
                         <div class="pro-card">
-                            <img src="assets/img/skolstudios.png" alt="skolstudios" class="img-fluid">
-                            <a href="https://skolstudios.com/" target="_blank">
+                            <img src="assets/img/projects/a21-logo.png" alt="Academy21" title="Academy21" class="w-75">
+                            <a href="https://www.academy21.in/" target="_blank">
                                 <div class="viewPro">
                                     <span>View Project</span>
                                 </div>
@@ -289,9 +310,9 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                     </div>
                     <div class="col-md-3">
                         <div class="pro-card">
-                            <img src="assets/img/kolli_hills.png" alt="yamini" class="img-fluid">
-                            <a href="https://ngkdpz6zqzvq0ijyseorjq-on.drv.tw/Live%20Projects/www.kolli_hills.com/"
-                                target="_blank">
+                            <img src="assets/img/projects/nl-logo.png" alt="NorthLark - Consular"
+                                title="NorthLark - consular" class="w-75">
+                            <a href="https://consular.northlark.com/" target="_blank">
                                 <div class="viewPro">
                                     <span>View Project</span>
                                 </div>
@@ -391,7 +412,7 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                         <p class="aboutSubText" data-aos="fade-right" data-aos-duration="800">
                             Don't hesitate to contact me for feedback or to engage in discussions about my work. I
                             eagerly anticipate talking about both my ongoing projects and potential freelance
-                            opportunities. Your input and inquiries are always welcome!
+                            opportunities.
                         </p>
                         <p class="code">&#60;/p&#62;</p>
                         <div class="conNum">
@@ -402,15 +423,16 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                 </div>
                 <div class="col-md-6 conForm">
                     <p class="code">&#60;form&#62;</p>
-                    <form action="/" id="contact-form">
+                    <form id="contact-form">
                         <div class="p-4">
-                            <input type="text" name="Name" id="Name" placeholder="Name" required> <br>
-                            <input type="email" name="eMail" id="eMail" placeholder="E-Mail" required> <br>
+                            <input type="hidden" name="contact_number">
+                            <input type="text" name="user_name" id="user_name" placeholder="Name" required> <br>
+                            <input type="email" name="user_email" id="user_email" placeholder="E-Mail" required> <br>
                             <input type="text" name="Subject" id="Subject" placeholder="Subject" required> <br>
                             <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"
                                 require></textarea>
                         </div>
-                        <input type="submit" name="submit" value="Chat Me" id="chatMe">
+                        <button type="submit" id="chatMe">Chat Me</button>
                     </form>
                     <p class="code">&#60;/form&#62;</p>
                 </div>
@@ -946,9 +968,7 @@ Code Optimization, Cross-Platform Development, Freelance Developer" />
                     </g>
                 </g>
             </svg>
-
         </div>
-
 
         <img src="assets/img/postBox.svg" alt="postBox" id="postBox" class="img-fluid">
 
